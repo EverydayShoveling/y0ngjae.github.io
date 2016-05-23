@@ -10,7 +10,7 @@ title: 1일1삽
 email: kennamu@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   코딩보다 먹는 걸 더 잘합니다.  
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  y0ngjae
