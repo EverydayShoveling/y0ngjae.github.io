@@ -4,13 +4,6 @@ html, body {
   padding: 0 0;
   margin: 0 0;
 }
-/*
-body {
-  background-image: url(./images/bg.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-*/
 
 img.bg {
   width: 100%;
@@ -51,11 +44,32 @@ img.btn_join {
 }
 
 .container {
-  margin-top: 30%;
+  padding-top: 30%;
 }
 
-@media screen and (width: 320px) and (height: 480px) {
-  .container {
-    margin-top: 20%;
-  }
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+.animate-flicker {
+   -webkit-animation: flickerAnimation 1s infinite;
+   -moz-animation: flickerAnimation 1s infinite;
+   -o-animation: flickerAnimation 1s infinite;
+    animation: flickerAnimation 1s infinite;
 }

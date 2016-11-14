@@ -9,18 +9,18 @@
   <body>
 
     <!-- background image -->
-    <img src="images/bg.png" class="bg" alt="background image" />
+    <img id="bg" src="images/bg.png" class="bg" alt="background image" />
 
     <!-- close button -->
-    <a href="http://momodrawing.com">
+    <!-- <a href="http://momodrawing.com">
       <img src="images/btn_close.png" class="btn_close" alt="close button"/>
-    </a>
+    </a> -->
 
     <br style="clear:both;"/>
 
-    <div class="container">
+    <div id="container" class="container">
       <!-- animal button -->
-      <a href="http://momodrawing.com?action=animal">
+      <a class="animate-flicker" href="http://momodrawing.com?action=animal">
         <img src="images/btn_animal.png" class="btn_animal" alt="animal button" />
       </a>
 
@@ -35,4 +35,19 @@
       </div>
     </div>
   </body>
+  <script>
+    window.onload = function() {
+      var bg = document.getElementById("bg");
+      var container = document.getElementById("container");
+
+      var per = Math.floor((document.body.clientWidth / bg.naturalWidth) * 100);
+
+      var expectedHeight = Math.floor(bg.naturalHeight * (per / 100));
+
+      if (expectedHeight > document.body.clientHeight) {
+        var height = Math.floor(document.body.clientHeight * container.offsetHeight / expectedHeight);
+        container.style.paddingTop = height + "px";
+      }
+    }
+  </script>
 </html>
